@@ -1,0 +1,26 @@
+/Codechef SnackDown 2021 Online Qualifiers: Lucky Number/
+
+/Below is the solution fo the above problem/
+
+using namespace std;
+void solve()
+{
+    int a,b,c;
+    cin>>a>>b>>c;
+    if(a==7 || b==7 || c==7){
+        cout<<"YES\n";
+    }
+    else{
+        cout<<"NO\n";
+    }
+}
+int main()
+{
+    int T;
+    cin>>T;
+    while(T--)
+    {
+        solve();
+    }
+    return 0;
+}
