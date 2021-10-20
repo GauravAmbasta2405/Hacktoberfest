@@ -1,0 +1,39 @@
+/Codechef SnackDown 2021: Test Match Series/
+
+/Below is the solution for the above problem/
+
+#include<iostream>
+using namespace std;
+void solve()
+{
+    int a=0,b=0;
+    for(int i=0;i<5;i++){
+        int k;
+        cin>>k;
+        if(k==1){
+            a++;
+        }
+        else if(k==2){
+            b++;
+        }
+    }
+    if(a>b){
+        cout<<"INDIA\n";
+    }
+    else if(a<b){
+        cout<<"ENGLAND\n";
+    }
+    else{
+        cout<<"DRAW\n";
+    }
+}
+int main()
+{
+    int T;
+    cin>>T;
+    while(T--)
+    {
+       solve();
+    }
+    return 0;
+}
