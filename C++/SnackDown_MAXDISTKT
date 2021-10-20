@@ -1,0 +1,53 @@
+/ Codechef Snackdown 2021 Online Qualifiers: Maximum Number Of Distinct Elements/
+
+/Below is the solution for the above problem/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define endl "\n"
+#define ll long long
+#define ld long double
+#define ar array;
+#define pb push_back
+bool cmp(pair<ll ,ll>&a,pair<ll,ll>&b){
+    return a.second < b.second;
+}
+void solve()
+{
+    ll n;
+    cin>>n;
+    vector<pair<ll,ll>>arr;
+    for(int i=0;i<n;i++){
+        ll k;
+        cin>>k;
+        arr.push_back(make_pair(k,i));
+    }
+    sort(arr.begin(),arr.end());
+    ll x=0;
+    for(int i=0;i<n;i++){
+        if(arr[i].first>x){
+            arr[i].first=x;
+            x++;
+        }
+        else if(x==arr[i].first){
+            arr[i].first=x;
+            
+        }
+    }
+    sort(arr.begin(),arr.end(),cmp);
+    for(int i=0;i<n;i++){
+        cout<<arr[i].first<<" ";
+    }
+    cout<<"\n";
+}
+int main()
+{
+    int T;
+    cin>>T;
+    int tc=0;
+    while(T--)
+    {
+       solve();
+    }
+    return 0;
+}
